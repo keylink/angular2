@@ -1,7 +1,8 @@
-# angular2app test application
+# angular2 test application
 
 [![](https://blog.appliedis.com/wp-content/uploads/2016/05/angular.png)](https://angular.io/)
 
+### Demo page is [here](https://keylink.github.io/angular2/)
 
 ## Official Docs
 * [Angular](https://angular.io/)
@@ -24,7 +25,7 @@ This app requires [Node.js](https://nodejs.org/)
 ### Install the dependencies and devDependencies and start the server.
 
 ```sh
-$ cd angular2app
+$ cd angular2
 $ npm install
 $ npm start
 ```
