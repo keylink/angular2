@@ -1,0 +1,37 @@
+select {
+	color: black;
+}
+
+.nav {
+	text-align: center;
+}
+
+.nav li a {
+	display: inline-block;
+}
+
+.mob__line {
+	display: inline-block;
+}
+
+.pull__right li a {
+	cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+	.nav {
+		text-align: left;
+	}
+
+	.nav li a {
+		display: block;
+	}
+
+	.pull__right {
+		float: right !important;
+	}
+
+	.mob__line {
+		display: none;
+	}
+}

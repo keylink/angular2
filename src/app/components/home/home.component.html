@@ -1,0 +1,6 @@
+<div class="container">
+	<div class="jumbotron">
+		<h1>{{ 'hello world' | translate }}</h1> 
+		<p *ngIf="user.name.length != 0 ">{{ 'user' | translate }} - {{ user.name }}</p> 
+	</div>
+</div>

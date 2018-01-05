@@ -1,0 +1,39 @@
+<nav class="navbar navbar-inverse ">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" (click)="collapse()">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="navbar" class="collapse navbar-collapse" [style.display]="isOpen">
+			<ul class="nav navbar-nav">
+				<li>
+					<a [routerLink]="['/']">{{ 'home' | translate }}</a>
+				</li>
+				<li *ngIf="user.name.length == 0 ">
+					<a [routerLink]="['/login']">{{ 'login' | translate }}</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav pull__right">
+				<li class="mob__line">
+					----------------------------
+				</li>
+				<li>
+					<a> {{user.name}} </a>
+				</li>
+				<li *ngIf="user.name.length != 0" (click)="logout()" [routerLink]="['/login']">
+					<a>{{ 'logout' | translate }}</a>
+				</li>
+				<li>
+					<a>
+						<select (change)="selectLang($event.target.value)">
+							<option *ngFor="let lang of supportedLangs" (click)="selectLang(lang.value)">{{lang.value}}</option>
+						</select>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
