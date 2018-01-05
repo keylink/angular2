@@ -30,7 +30,6 @@ export class NavbarComponent implements OnInit {
         // Subsribe to user changes
       	this.userService.userState.subscribe(value => {
       		this.user = value;
-              console.log("user", this.user)
       	})
     }
 
